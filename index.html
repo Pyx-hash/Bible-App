@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+      <link rel="icon" href="https://raw.githubusercontent.com/Temi-Tade/web-bible/refs/heads/main/assets/images/favicon.png" type="image/x-icon"/>
+      <link rel="stylesheet" href="style.css"/>
+    <title>Bible App</title>
+</head>
+<body>
+    <header>
+        <div id="name">
+            <img src="https://raw.githubusercontent.com/Temi-Tade/web-bible/refs/heads/main/assets/images/favicon.png" alt="logo" width="50">
+        </div>
+        <section id="info"><span id="b"></span> <span id="c"></span>
+    </section>
+    <div id="options">
+        <nav>
+            <ul type="none">
+                <li><button class="fa-solid fa-gear" title="Settings" onclick="SETTINGS()"></button></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <div id="main">
+        <div id="not-header">
+            <div id="content">
+                <section id="left-sidebar">
+                    <div class="search-wrap">
+                        <input type="text" oninput="SEARCH_BOOKS(this.value)" class="search" placeholder="Search a book or chapter..." id="search_books" autocomplete="off">
+                    </div>
+                    <p id="searchinfo"></p>
+                    <ul id="books-list" type="none"></ul>
+                </section>
+                <section id="bible-reading" class="not-mobile"></section>
+                <section id="right-sidebar" class="not-mobile">
+                    <h3 id="chapter-name">Chapters (Select a book first)</h3>
+                    <ul id="chapters-list" type="none"></ul>
+                </section>
+            </div>
+        </div>
+        <div id="modal-bg">
+            <div id="modal"></div>
+        </div>
+    </div>
+    <script src="js/api/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
